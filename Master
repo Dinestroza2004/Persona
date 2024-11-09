@@ -1,0 +1,25 @@
+/ Subclase Doctor
+public class Doctor extends Persona {
+    private String especialidad;
+
+    // Constructor
+    public Doctor(String nombre, int edad, String especialidad) {
+        super(nombre, edad);
+        this.especialidad = especialidad;
+    }
+
+    // Getter y setter
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    // Implementación del método abstracto
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("Doctor: " + getNombre() + ", Edad: " + getEdad() + ", Especialidad: " + especialidad);
+    }
+}
